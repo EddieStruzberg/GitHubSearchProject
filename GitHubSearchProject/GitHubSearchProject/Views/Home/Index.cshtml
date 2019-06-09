@@ -1,0 +1,12 @@
+﻿@{ViewBag.Title = "Home Page";}
+
+<div ng-controller="HomeController">
+    <form action="~/Home/SearchRepositories">
+        <br />
+        <h2>{{Headline}}</h2>
+        <br />
+        Search: <input id="searchInput" value="search repository" ng-model="Search" />
+        <input type="submit" id="search" value="Search" ng-click="SetData()"/>
+    </form>
+</div>
+

@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "SearchRepositories";
+}
+<div ng-controller="SearchRepositoriesController">
+    <form>
+        <br />
+        <h2>{{Headline}}</h2>
+        <br />
+        Search: <input id="searchInput" value="search repository" ng-model="Search" />
+        <input type="submit" id="search" value="Search" ng-click="SearchRepositories()" />
+        <br />
+    </form>
+    <div class="gallery" ng-repeat="Data in ReceivedData">
+        <img class="img" ng-src="{{Data.owner.avatar_url}}" alt="avatar" width="800" height="600">
+        <div class="desc">{{Data.name}}</div>
+        <div><button class="desc" ng-click="SetBookMark(Data)"> BookMark Repository </button></div>
+    </div>
+
+</div>
+

@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "BookMarks";
+}
+
+<div ng-controller="BookMarksController">
+    <br />
+    <h2>{{Headline}}</h2>
+    <br />
+    <div ng-If="BookMarks == null">
+        No BookMarks has beed found
+    </div>
+    <div class="gallery" ng-repeat="Data in BookMarks">
+        <div class="desc">{{Data.name}}</div>
+        <img class="imgcol" ng-src="{{Data.owner.avatar_url}}" alt="Smiley face">
+    </div>
+</div>
